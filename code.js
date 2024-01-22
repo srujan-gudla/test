@@ -2,7 +2,7 @@ var p5Inst = new p5(null, 'sketch');
 
 window.preload = function () {
   initMobileControls(p5Inst);
-
+  sound = loadSound("retro_game_alert_3.mp3");
   p5Inst._predefinedSpriteAnimations = {};
   p5Inst._pauseSpriteAnimationsByDefault = false;
   var animationListJSON = {"orderedKeys":[],"propsByKey":{}};
@@ -154,7 +154,7 @@ function draw() {
   elapsedTime = millis() - startTime;
 
   // Check if 20 seconds have passed
-  if (elapsedTime >= 120000 && compScore < 5 && playerScore < 5) {
+  if (elapsedTime >= 20000 && compScore < 5 && playerScore < 5) {
     playSound("./retro_game_alert_3.mp3")
     // Increase the speed
     ball.setVelocity(ball.velocity.x * speedIncreaseFactor, ball.velocity.y * speedIncreaseFactor);
