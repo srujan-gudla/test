@@ -155,13 +155,13 @@ function draw() {
 
   // Check if 20 seconds have passed
   if (elapsedTime >= 120000 && compScore < 5 && playerScore < 5) {
-    playSound("assets/category_alerts/retro_game_alert_3.mp3")
+    playSound("./retro_game_alert_3.mp3")
     // Increase the speed
     ball.setVelocity(ball.velocity.x * speedIncreaseFactor, ball.velocity.y * speedIncreaseFactor);
     count=count+1;
     // Increase the speed increase factor by 1.1x
     speedIncreaseFactor *= 1.1;
-      
+      gameState="over";
       // Reset the stopwatch
     startTime = millis();
 
