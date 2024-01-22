@@ -154,7 +154,7 @@ function draw() {
   elapsedTime = millis() - startTime;
 
   // Check if 20 seconds have passed
-  if (elapsedTime >= 20000 && compScore < 5 && playerScore < 5) {
+  if (elapsedTime >= 120000 && compScore < 5 && playerScore < 5) {
     playSound("assets/category_alerts/retro_game_alert_3.mp3")
     // Increase the speed
     ball.setVelocity(ball.velocity.x * speedIncreaseFactor, ball.velocity.y * speedIncreaseFactor);
